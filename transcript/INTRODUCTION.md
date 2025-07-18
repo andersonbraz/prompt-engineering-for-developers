@@ -1,0 +1,41 @@
+# INTRODUCTION
+
+Bem-vindo a este curso sobre Engenharia de Prompt com ChatGPT para Desenvolvedores.
+
+Estou muito feliz por ter comigo Isa Fulford para ensinar isso junto comigo. Ela é membro da equipe técnica da OpenAI e ajudou a construir o popular plugin de Recuperação do ChatGPT, e grande parte do seu trabalho tem sido ensinar as pessoas a usarem LLMs, ou Modelos de Linguagem de Grande Escala, em produtos. Ela também contribuiu para o OpenAI Cookbook, que ensina as pessoas a criarem prompts. Muito feliz por tê-la conosco.
+
+E estou animado para estar aqui e compartilhar algumas das melhores práticas de prompting com todos vocês.
+
+Há muito material disponível na internet sobre prompting, com artigos do tipo "30 prompts que todos precisam conhecer". Grande parte disso tem sido focada na interface web do ChatGPT, que muitas pessoas usam para tarefas específicas e pontuais. Mas eu acho que o poder dos LLMs, os modelos de linguagem de grande escala, como ferramenta para desenvolvedores — ou seja, usar chamadas de API para LLMs para construir rapidamente aplicações de software — ainda é algo muito subestimado.
+
+Na verdade, minha equipe no AI Fund, que é uma empresa irmã da DeepLearning.ai, tem trabalhado com muitas startups na aplicação dessas tecnologias em várias aplicações diferentes, e tem sido empolgante ver como as APIs de LLMs podem permitir que desenvolvedores criem rapidamente. Então, neste curso, vamos compartilhar com você algumas das possibilidades do que você pode fazer, bem como as melhores práticas de como você pode fazer isso.
+
+Há muito conteúdo a ser abordado. Primeiro, você aprenderá algumas boas práticas de prompting para desenvolvimento de software. Depois, abordaremos alguns casos de uso comuns, como sumarização, inferência, transformação, expansão, e então você construirá um chatbot usando um LLM. Esperamos que isso desperte sua imaginação sobre novas aplicações que você pode construir.
+
+No desenvolvimento de modelos de linguagem de grande escala, ou LLMs, existem basicamente dois tipos de LLMs, que vou chamar de LLMs base e LLMs ajustados por instruções.
+
+O LLM base foi treinado para prever a próxima palavra com base em dados de texto, geralmente treinado com uma grande quantidade de dados da internet e de outras fontes para descobrir qual é a próxima palavra mais provável a ser usada. Por exemplo, se pedirmos que ele complete “Era uma vez um unicórnio”, ele pode completar assim: pode prever que as próximas palavras serão que ele vivia em uma floresta mágica com todos os seus amigos unicórnios.
+
+Mas, se você nos pedisse, por exemplo, "qual é a capital da França?", então, com base nos artigos disponíveis na internet, é bem possível que o LLM base completasse isso com "qual é a maior cidade da França", "qual é a população da França" e assim por diante, porque os artigos na internet podem muito bem ser listas de perguntas de quiz sobre o país França.
+
+Em contraste, um LLM ajustado por instruções — que é onde grande parte do progresso e da prática com LLMs tem se concentrado — foi treinado para seguir instruções. Então, se você perguntasse "qual é a capital da França?", é muito mais provável que ele responda algo como: "a capital da França é Paris."
+
+A forma como os LLMs ajustados por instruções geralmente são treinados é a seguinte: você começa com um LLM base, que foi treinado com uma enorme quantidade de dados de texto, e o treina ainda mais — ajustando-o com entradas e saídas que são instruções e boas tentativas de seguir essas instruções.
+
+Depois, ele costuma passar por um refinamento adicional usando uma técnica chamada RLHF, ou aprendizado por reforço com feedback humano, para tornar o sistema mais capaz de ser útil e seguir instruções.
+
+Como os LLMs ajustados por instruções foram treinados para serem úteis, honestos e inofensivos, eles são, por exemplo, muito menos propensos a gerar respostas problemáticas do que os LLMs base.
+
+Na prática, os cenários de uso têm migrado para os LLMs ajustados por instruções.
+
+Algumas das melhores práticas que você encontra na internet podem ser mais adequadas para um LLM base, mas para a maioria das aplicações práticas hoje, recomendamos que a maioria das pessoas foque nos LLMs ajustados por instruções, pois eles são mais fáceis de usar e, também, por causa do trabalho da OpenAI e de outras empresas de LLMs para torná-los mais seguros e melhor alinhados.
+
+Então, este curso se concentrará nas melhores práticas para LLMs ajustados por instruções, que é o que recomendamos que você use para a maioria das suas aplicações. Antes de prosseguir, só quero agradecer à equipe da OpenAI e da DeepLearning.ai que contribuiu com os materiais que Isa e eu estaremos apresentando. Sou muito grato a Andrew Mayne, Joe Palermo, Boris Power, Ted Sanders e Lillian Weng, da OpenAI, que estiveram muito envolvidos conosco na criação dos materiais, revisando os conteúdos para montar o currículo deste breve curso. Também sou grato ao lado da DeepLearning pelo trabalho de Geoff Lodwig, Eddy Shyu e Tommy Nelson.
+
+Então, quando você usa um LLM ajustado por instrução, pense em dar instruções para outra pessoa — alguém inteligente, mas que não conhece os detalhes da sua tarefa. Portanto, quando um LLM não funciona, às vezes é porque as instruções não estavam claras o suficiente. Por exemplo, se você dissesse: “por favor, escreva algo sobre Alan Turing”. Bem, além disso, pode ser útil deixar claro se você quer que o texto se concentre no trabalho científico dele, na vida pessoal ou no papel dele na história, ou em outra coisa. E se você especificar qual o tom do texto, isso também ajuda — o texto deve soar como o de um jornalista profissional? Ou mais como uma conversa informal, com um toque de amigo?
+
+Isso ajuda o LLM a gerar o que você deseja. E, claro, se você imaginar que está pedindo, por exemplo, para um recém-formado na faculdade realizar essa tarefa para você, se você puder até mesmo especificar quais trechos de texto essa pessoa deveria ler com antecedência para escrever esse texto sobre Alan Turing, isso ajuda ainda mais a preparar esse recém-formado para realizar a tarefa com sucesso para você.
+
+Então, no próximo vídeo, você verá exemplos de como ser claro e específico, o que é um princípio importante ao fazer prompts para LLMs. E você também aprenderá com Isa um segundo princípio de prompting, que é dar tempo para o LLM pensar.
+
+Com isso, vamos seguir para o próximo vídeo.
