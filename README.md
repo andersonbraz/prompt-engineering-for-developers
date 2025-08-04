@@ -1,4 +1,4 @@
-# prompt-engineering-for-developers
+# ChatGPT Prompt Engineering for Developers
 
 Course - ChatGPT Prompt Engineering for Developers by DeepLearning.ai
 
