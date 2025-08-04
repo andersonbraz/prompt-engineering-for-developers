@@ -12,6 +12,12 @@ Course - ChatGPT Prompt Engineering for Developers by DeepLearning.ai
 
 ## Guidelines
 
+📋 **Diretrizes para Prompts Eficazes** - A aula apresenta quatro diretrizes fundamentais para escrever prompts mais eficazes: fornecer instruções claras, usar contexto relevante, dividir tarefas complexas em etapas menores e dar exemplos específicos. Essas práticas ajudam os modelos de linguagem a entender melhor o que se espera deles, resultando em respostas mais precisas e úteis.
+
+🧩 **Importância do Contexto e da Estrutura** -  O instrutor enfatiza que quanto mais contexto o modelo recebe, melhor ele pode responder. Isso inclui informações sobre o objetivo da tarefa, o público-alvo ou até mesmo o formato desejado da resposta. Além disso, estruturar o prompt com clareza — como usar listas, separadores ou instruções passo a passo — facilita o processamento da informação pelo modelo.
+
+🎯 **Exemplos e Aplicações Práticas** -  Durante a aula, são mostrados exemplos práticos que ilustram como pequenas mudanças no prompt podem melhorar significativamente os resultados. Por exemplo, ao pedir uma resposta em formato de tabela ou ao incluir exemplos de entrada e saída, o modelo tende a seguir o padrão com mais precisão. A ideia central é que bons prompts não são apenas sobre o que se pergunta, mas como se pergunta.
+
 
 ### Fonte
 
