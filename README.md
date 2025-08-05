@@ -26,6 +26,42 @@ Course - ChatGPT Prompt Engineering for Developers by DeepLearning.ai
 
 🚀 Por fim, o conteúdo reforça que a **experimentação é essencial**. Iterar sobre os prompts não só melhora a qualidade das respostas, como também revela padrões de comportamento do modelo. Essa abordagem torna o uso da IA mais confiável e adaptável a diferentes contextos, permitindo que desenvolvedores criem soluções mais robustas e alinhadas aos objetivos de seus projetos.
 
+## Summarizing
+
+📝 A aula sobre resumos com modelos de linguagem mostra como LLMs podem condensar grandes volumes de texto em versões mais curtas e informativas. Essa capacidade é útil para quem precisa consumir conteúdo rapidamente, como artigos, avaliações de produtos ou documentos extensos. O uso de prompts bem definidos permite gerar resumos com limite de palavras, número de sentenças ou foco em aspectos específicos do texto original.
+
+🎯 A personalização do resumo é um dos pontos-chave abordados. O modelo pode adaptar o conteúdo conforme o público-alvo — por exemplo, gerar resumos voltados para departamentos específicos como logística ou precificação. Isso é feito ajustando o prompt para extrair apenas as informações relevantes para aquele contexto, tornando o resultado mais acionável e direcionado.
+
+📊 A aula também demonstra como aplicar essa técnica em escala, processando listas de textos e gerando resumos automatizados. Isso permite construir sistemas que facilitam a leitura de grandes volumes de dados, como dashboards de avaliações ou alertas temáticos. Com prompts bem estruturados, é possível transformar tarefas manuais em fluxos inteligentes e eficientes com apenas algumas linhas de código.
+
+## Inferring
+
+🧠 A aula sobre inferência com modelos de linguagem mostra como é possível extrair informações específicas de um texto sem a necessidade de treinar modelos supervisionados. Com o uso de prompts bem formulados, o modelo pode identificar sentimentos (positivo ou negativo), emoções, nomes, marcas e outros dados relevantes diretamente a partir do conteúdo textual — tudo isso com rapidez e flexibilidade.
+
+🔍 A técnica também permite adaptar os prompts para diferentes objetivos, como detectar se um cliente está expressando raiva, alegria ou insatisfação. Isso é especialmente útil em contextos de atendimento ao cliente, onde respostas automatizadas podem priorizar casos críticos. Além disso, é possível extrair múltiplas informações em uma única chamada, estruturando a saída em formatos como JSON para facilitar o pós-processamento.
+
+📚 A aula ainda explora aplicações como classificação de tópicos em artigos, usando listas predefinidas e respostas binárias (0 ou 1) para indicar presença ou ausência de temas. Essa abordagem, conhecida como zero-shot learning, permite construir sistemas inteligentes de alerta, categorização e análise de conteúdo sem dados rotulados — apenas com engenharia de prompts bem pensada.
+
+## Transforming
+
+🔄 A aula sobre transformação de texto com modelos de linguagem mostra como é possível reescrever, resumir, expandir ou adaptar conteúdos usando apenas prompts bem elaborados — sem necessidade de treinamento adicional.
+
+✍️ Com essa técnica, você pode:
+
+Reformular frases mantendo o sentido original.
+
+Traduzir textos automaticamente.
+
+Resumir conteúdos longos em versões mais concisas.
+
+Expandir ideias curtas em parágrafos completos.
+
+Adaptar o tom e estilo para diferentes públicos (formal, casual, técnico, etc.).
+
+📦 Um dos destaques é a capacidade de transformar dados estruturados (como tabelas ou JSON) em texto natural e vice-versa. Isso permite criar descrições automáticas de produtos, relatórios ou até mesmo gerar código a partir de instruções em linguagem comum.
+
+💡 A aula também explora como usar o modelo para gerar variações criativas de um mesmo conteúdo — útil para marketing, redes sociais ou testes A/B. Tudo isso com rapidez e flexibilidade, aproveitando o poder da engenharia de prompts para transformar ideias em resultados prontos para uso.
+
 ### Fonte
 
 https://learn.deeplearning.ai/courses/chatgpt-prompt-eng/
