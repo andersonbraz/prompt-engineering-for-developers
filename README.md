@@ -20,11 +20,12 @@ Course - ChatGPT Prompt Engineering for Developers by DeepLearning.ai
 
 ## Interative
 
-A abordagem iterativa no uso de modelos de linguagem generativa é essencial para obter resultados mais precisos e úteis. Em vez de depender de um único prompt, o processo envolve testar, ajustar e refinar instruções com base nas respostas obtidas. Essa prática permite entender como o modelo interpreta comandos e como pequenas mudanças podem impactar significativamente a saída.
+A aula sobre **abordagem iterativa** destaca a importância de ajustar e refinar prompts para obter melhores resultados. Em vez de depender de uma única tentativa, o processo envolve testar variações, observar as respostas e melhorar progressivamente. Essa prática permite que desenvolvedores entendam como o modelo interpreta comandos e como pequenas mudanças podem gerar saídas mais precisas e úteis.
 
-Técnicas como delimitação de conteúdo, uso de formatos estruturados (JSON, Markdown) e instruções explícitas sobre tom, estilo e formato são fundamentais para orientar o modelo com mais controle. Ao aplicar essas estratégias, o desenvolvedor consegue transformar tarefas complexas — como tradução, correção gramatical e conversão de formatos — em fluxos mais previsíveis e eficientes.
+A aula também apresenta técnicas para tornar os prompts mais eficazes, como o uso de **delimitadores claros, instruções explícitas e formatos estruturados (como JSON ou Markdown)**. Essas estratégias ajudam o modelo a compreender melhor a intenção do usuário e a produzir respostas mais consistentes, especialmente em tarefas como tradução, correção gramatical, transformação de tom e extração de informações específicas.
 
-A experimentação contínua é parte central do processo. Iterar sobre prompts não apenas melhora a qualidade das respostas, mas também revela padrões de comportamento do modelo. Essa abordagem torna o uso da IA mais confiável e adaptável a diferentes contextos, permitindo que desenvolvedores criem soluções mais robustas e alinhadas aos seus objetivos.
+Por fim, o conteúdo reforça que a **experimentação é essencial**. Iterar sobre os prompts não só melhora a qualidade das respostas, como também revela padrões de comportamento do modelo. Essa abordagem torna o uso da IA mais confiável e adaptável a diferentes contextos, permitindo que desenvolvedores criem soluções mais robustas e alinhadas aos objetivos de seus projetos.
+
 
 ### Fonte
 
