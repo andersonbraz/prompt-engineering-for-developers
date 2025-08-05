@@ -1,0 +1,159 @@
+<html>
+<body>
+<div class="break-word glass absolute bottom-0 left-0 right-0 top-0 overflow-auto bg-base-200 pb-20 pl-20"><div class="sticky top-0 flex justify-between bg-base-200 py-4 pr-4 text-neutral"><span class="text-xl">Transcript</span><div class="flex gap-2"><button class="btn btn-circle btn-ghost btn-sm" aria-label="Close transcript"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" class="h-6 w-6" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M11.9997 10.5865L16.9495 5.63672L18.3637 7.05093L13.4139 12.0007L18.3637 16.9504L16.9495 18.3646L11.9997 13.4149L7.04996 18.3646L5.63574 16.9504L10.5855 12.0007L5.63574 7.05093L7.04996 5.63672L11.9997 10.5865Z"></path></svg></button></div></div><p class="text-neutral"><span class="link link-primary">0:03</span> <span class="">Large language models are very good
+at transforming its input to a</span></p><p class="text-neutral"><span class="link link-primary">0:07</span> <span class="">different format,
+such as inputting a</span></p><p class="text-neutral"><span class="link link-primary">0:09</span> <span class="">piece of text in
+one language and transforming</span></p><p class="text-neutral"><span class="link link-primary">0:11</span> <span class="">it or translating it
+to a different language,</span></p><p class="text-neutral"><span class="link link-primary">0:14</span> <span class="">or helping with
+spelling and grammar corrections.</span></p><p class="text-neutral"><span class="link link-primary">0:16</span> <span class="">So taking as input a piece of text
+that may not be</span></p><p class="text-neutral"><span class="link link-primary">0:20</span> <span class="">fully grammatical and helping
+you to fix that up a bit,</span></p><p class="text-neutral"><span class="link link-primary">0:24</span> <span class="">or even transforming formats,
+such as inputting</span></p><p class="text-neutral"><span class="link link-primary">0:26</span> <span class="">HTML and outputting JSON. So there's
+a bunch of applications that I</span></p><p class="text-neutral"><span class="link link-primary">0:30</span> <span class="">used to write somewhat painfully with
+a bunch of regular expressions that</span></p><p class="text-neutral"><span class="link link-primary">0:34</span> <span class="">would definitely be much more simply
+implemented now with a large language</span></p><p class="text-neutral"><span class="link link-primary">0:38</span> <span class="">model and a few prompts.</span></p><p class="text-neutral"><span class="link link-primary">0:40</span> <span class="">Yeah, I use ChatGPT to
+proofread pretty much everything</span></p><p class="text-neutral"><span class="link link-primary">0:43</span> <span class="">I write these days, so I'm
+excited to show you</span></p><p class="text-neutral"><span class="link link-primary">0:46</span> <span class="">some more examples in
+the notebook now. So first we'll import</span></p><p class="text-neutral"><span class="link link-primary">0:50</span> <span class="">OpenAI and also use
+the same get_completion helper function</span></p><p class="text-neutral"><span class="link link-primary">0:53</span> <span class="">that we've been using throughout
+the videos. And the first thing</span></p><p class="text-neutral"><span class="link link-primary">0:56</span> <span class="">we'll do is a translation
+task. So large language models are</span></p><p class="text-neutral"><span class="link link-primary">1:00</span> <span class="">trained on a lot
+of text from kind of many sources, a</span></p><p class="text-neutral"><span class="link link-primary">1:04</span> <span class="">lot of which is
+the internet, and this is kind of,</span></p><p class="text-neutral"><span class="link link-primary">1:08</span> <span class="">of course, in many different languages. So
+this kind of imbues</span></p><p class="text-neutral"><span class="link link-primary">1:11</span> <span class="">the model with the
+ability to do translation.</span></p><p class="text-neutral"><span class="link link-primary">1:14</span> <span class="">And these models know kind
+of hundreds of languages to varying</span></p><p class="text-neutral"><span class="link link-primary">1:18</span> <span class="">degrees of proficiency.
+And so we'll go through</span></p><p class="text-neutral"><span class="link link-primary">1:20</span> <span class="">some examples of
+how to use this capability.</span></p><p class="text-neutral"><span class="link link-primary">1:23</span> <span class=""></span></p><p class="text-neutral"><span class="link link-primary">1:25</span> <span class="">So let's
+start off with something simple.</span></p><p class="text-neutral"><span class="link link-primary">1:27</span> <span class="">So in this first example,
+the prompt is</span></p><p class="text-neutral"><span class="link link-primary">1:31</span> <span class="">translate the following
+English text to Spanish. "Hi,</span></p><p class="text-neutral"><span class="link link-primary">1:34</span> <span class="">I would like to order a blender".
+And the response is "Hola,</span></p><p class="text-neutral"><span class="link link-primary">1:40</span> <span class="">me gustaría ordenar una licuadora".
+And I'm very sorry to all</span></p><p class="text-neutral"><span class="link link-primary">1:44</span> <span class="">of you Spanish speakers. I
+never learned Spanish, unfortunately,</span></p><p class="text-neutral"><span class="link link-primary">1:48</span> <span class="">as
+you can definitely tell.</span></p><p class="text-neutral"><span class="link link-primary">1:52</span> <span class="">Okay, let's try another example. So
+in this example, the prompt is "Tell</span></p><p class="text-neutral"><span class="link link-primary">1:58</span> <span class="">me what language this is".</span></p><p class="text-neutral"><span class="link link-primary">2:02</span> <span class="">And then this is in French,
+"Combien coûte le lampadaire".</span></p><p class="text-neutral"><span class="link link-primary">2:07</span> <span class="">And so let's run this.</span></p><p class="text-neutral"><span class="link link-primary">2:10</span> <span class="">And the model has identified that
+"This is French."</span></p><p class="text-neutral"><span class="link link-primary">2:16</span> <span class="">The model can also
+do multiple translations at once.</span></p><p class="text-neutral"><span class="link link-primary">2:19</span> <span class="">So in this example, let's
+say translate the following text</span></p><p class="text-neutral"><span class="link link-primary">2:23</span> <span class="">to French and Spanish.</span></p><p class="text-neutral"><span class="link link-primary">2:26</span> <span class="">And you know what? Let's
+add another an English pirate.</span></p><p class="text-neutral"><span class="link link-primary">2:32</span> <span class="">And the text is
+"I want to order a basketball".</span></p><p class="text-neutral"><span class="link link-primary">2:39</span> <span class="">So here we have French,
+Spanish and English pirate.</span></p><p class="text-neutral"><span class="link link-primary">2:45</span> <span class="">So in some languages,
+the translation can change</span></p><p class="text-neutral"><span class="link link-primary">2:48</span> <span class="">depending on the speaker's
+relationship to the listener. And</span></p><p class="text-neutral"><span class="link link-primary">2:51</span> <span class="">you can also explain this
+to the language model. And</span></p><p class="text-neutral"><span class="link link-primary">2:54</span> <span class="">so it will be able
+to kind of translate accordingly.</span></p><p class="text-neutral"><span class="link link-primary">2:58</span> <span class="">So in this example, we
+say, "Translate</span></p><p class="text-neutral"><span class="link link-primary">3:00</span> <span class="">the following text to
+Spanish in both the</span></p><p class="text-neutral"><span class="link link-primary">3:03</span> <span class="">formal and informal forms". "Would
+you like to order a pillow?" And</span></p><p class="text-neutral"><span class="link link-primary">3:07</span> <span class="">also notice here we're using
+a different delimiter than</span></p><p class="text-neutral"><span class="link link-primary">3:10</span> <span class="">these backticks. It doesn't
+really matter</span></p><p class="text-neutral"><span class="link link-primary">3:12</span> <span class="">as long as there's kind of a
+clear separation.</span></p><p class="text-neutral"><span class="link link-primary">3:16</span> <span class="">So here we have the formal and informal.</span></p><p class="text-neutral"><span class="link link-primary">3:20</span> <span class="">So formal is when you're
+speaking to someone who's maybe</span></p><p class="text-neutral"><span class="link link-primary">3:23</span> <span class="">senior to you or you're in a
+professional situation. That's when you</span></p><p class="text-neutral"><span class="link link-primary">3:27</span> <span class="">use a formal tone and then informal
+is when you're speaking to maybe a</span></p><p class="text-neutral"><span class="link link-primary">3:32</span> <span class="">group of friends. I don't actually speak Spanish
+but my dad does and he says</span></p><p class="text-neutral"><span class="link link-primary">3:37</span> <span class="">that this is correct. So
+for the next example, we're</span></p><p class="text-neutral"><span class="link link-primary">3:40</span> <span class="">going to pretend that we're in
+charge of a multinational e-commerce company</span></p><p class="text-neutral"><span class="link link-primary">3:44</span> <span class="">and so the user messages are going
+to be in all</span></p><p class="text-neutral"><span class="link link-primary">3:48</span> <span class="">different languages and so
+users are going to</span></p><p class="text-neutral"><span class="link link-primary">3:50</span> <span class="">be telling us about
+their IT issues in a wide variety of</span></p><p class="text-neutral"><span class="link link-primary">3:54</span> <span class="">languages. So we need
+a universal translator. So first we'll</span></p><p class="text-neutral"><span class="link link-primary">3:57</span> <span class="">just paste in a list of
+user messages in a variety of different languages.</span></p><p class="text-neutral"><span class="link link-primary">4:02</span> <span class=""></span></p><p class="text-neutral"><span class="link link-primary">4:03</span> <span class="">And now we will loop
+through each of these user messages.</span></p><p class="text-neutral"><span class="link link-primary">4:11</span> <span class="">So "for issue in user_messages".</span></p><p class="text-neutral"><span class="link link-primary">4:16</span> <span class="">And then I'm going to copy over this
+slightly longer code block.</span></p><p class="text-neutral"><span class="link link-primary">4:21</span> <span class="">And so the first thing we'll
+do is ask the model</span></p><p class="text-neutral"><span class="link link-primary">4:25</span> <span class="">to tell us what language
+the issue is in. So here's the</span></p><p class="text-neutral"><span class="link link-primary">4:30</span> <span class="">prompt. Then we'll print out
+the original message's language and the</span></p><p class="text-neutral"><span class="link link-primary">4:34</span> <span class="">issue. And then we'll ask
+the model to translate it into English and</span></p><p class="text-neutral"><span class="link link-primary">4:39</span> <span class="">Korean.</span></p><p class="text-neutral"><span class="link link-primary">4:41</span> <span class="">So let's run this.</span></p><p class="text-neutral"><span class="link link-primary">4:44</span> <span class="">So the original message in French.</span></p><p class="text-neutral"><span class="link link-primary">4:51</span> <span class="">So we have a
+variety of languages and</span></p><p class="text-neutral"><span class="link link-primary">4:54</span> <span class="">then the model translates
+them into English and then Korean.</span></p><p class="text-neutral"><span class="link link-primary">4:57</span> <span class="">And you can kind of see here,
+so the model says, "This is French".</span></p><p class="text-neutral"><span class="link link-primary">5:01</span> <span class="">So that's
+because the response from this</span></p><p class="text-neutral"><span class="link link-primary">5:03</span> <span class="">prompt is going to be "This
+is French". You</span></p><p class="text-neutral"><span class="link link-primary">5:06</span> <span class="">could try editing this
+prompt to say something</span></p><p class="text-neutral"><span class="link link-primary">5:09</span> <span class="">like tell me what
+language this is, respond</span></p><p class="text-neutral"><span class="link link-primary">5:11</span> <span class="">with only one word or don't use
+a sentence, that kind</span></p><p class="text-neutral"><span class="link link-primary">5:15</span> <span class="">of thing. If you
+wanted this to just be one word. Or you</span></p><p class="text-neutral"><span class="link link-primary">5:19</span> <span class="">could ask for it in a JSON format
+or something like that, which would</span></p><p class="text-neutral"><span class="link link-primary">5:23</span> <span class="">probably encourage it
+to not use a whole sentence.</span></p><p class="text-neutral"><span class="link link-primary">5:26</span> <span class=""></span></p><p class="text-neutral"><span class="link link-primary">5:27</span> <span class="">And so amazing, you've
+just built a universal translator. And</span></p><p class="text-neutral"><span class="link link-primary">5:31</span> <span class="">also feel free to pause
+the video and add kind</span></p><p class="text-neutral"><span class="link link-primary">5:35</span> <span class="">of any other languages you
+want to try here. Maybe</span></p><p class="text-neutral"><span class="link link-primary">5:39</span> <span class="">languages you speak
+yourself and see how the model</span></p><p class="text-neutral"><span class="link link-primary">5:42</span> <span class="">does.</span></p><p class="text-neutral"><span class="link link-primary">5:44</span> <span class="">So, the next thing we're
+going to dive into</span></p><p class="text-neutral"><span class="link link-primary">5:47</span> <span class="">is tone transformation. Writing
+can vary based on</span></p><p class="text-neutral"><span class="link link-primary">5:49</span> <span class="">an intended audience, you know, the
+way that I would write an email to</span></p><p class="text-neutral"><span class="link link-primary">5:54</span> <span class="">a colleague or a
+professor is obviously going</span></p><p class="text-neutral"><span class="link link-primary">5:57</span> <span class="">to be quite different
+to the way I</span></p><p class="text-neutral"><span class="link link-primary">5:59</span> <span class="">text my younger brother. And so, ChatGPT
+can actually also help</span></p><p class="text-neutral"><span class="link link-primary">6:03</span> <span class="">produce different tones.</span></p><p class="text-neutral"><span class="link link-primary">6:05</span> <span class="">So, let's look at some examples. So, in
+this first example, the</span></p><p class="text-neutral"><span class="link link-primary">6:09</span> <span class="">prompt is "Translate
+the following from slang</span></p><p class="text-neutral"><span class="link link-primary">6:12</span> <span class="">to a business letter". "Dude, this
+is Joe, check out this spec on</span></p><p class="text-neutral"><span class="link link-primary">6:17</span> <span class="">the standing lamp."</span></p><p class="text-neutral"><span class="link link-primary">6:19</span> <span class="">So, let's execute this.</span></p><p class="text-neutral"><span class="link link-primary">6:24</span> <span class="">And as you can see, we have a much
+more formal business letter</span></p><p class="text-neutral"><span class="link link-primary">6:29</span> <span class="">with a proposal for
+a standing lamp specification.</span></p><p class="text-neutral"><span class="link link-primary">6:33</span> <span class="">The next thing that we're
+going to do is to</span></p><p class="text-neutral"><span class="link link-primary">6:37</span> <span class="">convert between different formats. ChatGPT
+is very good at translating between</span></p><p class="text-neutral"><span class="link link-primary">6:40</span> <span class="">different formats such
+as JSON to HTML, you know, XML, all</span></p><p class="text-neutral"><span class="link link-primary">6:44</span> <span class="">kinds of things. Markdown.</span></p><p class="text-neutral"><span class="link link-primary">6:47</span> <span class="">And so, in the prompt, we'll
+describe both the input</span></p><p class="text-neutral"><span class="link link-primary">6:51</span> <span class="">and the output formats. So, here
+is an example. So, we</span></p><p class="text-neutral"><span class="link link-primary">6:55</span> <span class="">have this JSON that
+contains a list of</span></p><p class="text-neutral"><span class="link link-primary">6:59</span> <span class="">restaurant employees with their
+name and email.</span></p><p class="text-neutral"><span class="link link-primary">7:03</span> <span class="">And then in the prompt, we're
+going to ask the</span></p><p class="text-neutral"><span class="link link-primary">7:07</span> <span class="">model to translate this
+from JSON to HTML. So, the</span></p><p class="text-neutral"><span class="link link-primary">7:11</span> <span class="">prompt is "Translate
+the following Python dictionary</span></p><p class="text-neutral"><span class="link link-primary">7:13</span> <span class="">from JSON to an
+HTML table with column</span></p><p class="text-neutral"><span class="link link-primary">7:17</span> <span class="">headers and title".</span></p><p class="text-neutral"><span class="link link-primary">7:20</span> <span class="">And then we'll
+get the response from the</span></p><p class="text-neutral"><span class="link link-primary">7:24</span> <span class="">model and print it.</span></p><p class="text-neutral"><span class="link link-primary">7:28</span> <span class="">So, here we have some
+HTML displaying all of</span></p><p class="text-neutral"><span class="link link-primary">7:33</span> <span class="">the employee names and emails.</span></p><p class="text-neutral"><span class="link link-primary">7:37</span> <span class="">And so, now let's
+see if we can actually view this HTML. So,</span></p><p class="text-neutral"><span class="link link-primary">7:43</span> <span class="">we're going to use this
+display function from this Python library,</span></p><p class="text-neutral"><span class="link link-primary">7:49</span> <span class="">"display (HTML(response))".</span></p><p class="text-neutral"><span class="link link-primary">7:53</span> <span class="">And here you can see that this is
+a properly formatted HTML table.</span></p><p class="text-neutral"><span class="link link-primary">7:59</span> <span class="">The next transformation task we're
+going to do is spell</span></p><p class="text-neutral"><span class="link link-primary">8:03</span> <span class="">check and grammar checking. And
+this is a really kind</span></p><p class="text-neutral"><span class="link link-primary">8:06</span> <span class="">of popular use for ChatGPT. I
+highly recommend doing this, I</span></p><p class="text-neutral"><span class="link link-primary">8:10</span> <span class="">do this all the time. And it's especially
+useful when you're working in</span></p><p class="text-neutral"><span class="link link-primary">8:15</span> <span class="">a non-native language. And so here are
+some examples of some common grammar</span></p><p class="text-neutral"><span class="link link-primary">8:20</span> <span class="">and spelling problems and how the
+language model can help address these.</span></p><p class="text-neutral"><span class="link link-primary">8:24</span> <span class="">So I'm going to paste in
+a list of sentences that have some grammatical</span></p><p class="text-neutral"><span class="link link-primary">8:29</span> <span class="">or spelling errors.</span></p><p class="text-neutral"><span class="link link-primary">8:32</span> <span class="">And then we're going to loop through
+each of these sentences</span></p><p class="text-neutral"><span class="link link-primary">8:40</span> <span class="">and ask the model
+to proofread these.</span></p><p class="text-neutral"><span class="link link-primary">8:47</span> <span class="">Proofread and correct. And then we'll
+use some delimiters.</span></p><p class="text-neutral"><span class="link link-primary">9:03</span> <span class="">And then we will get the
+response and print it as usual.</span></p><p class="text-neutral"><span class="link link-primary">9:26</span> <span class="">And so the model is able to correct
+all of these grammatical errors.</span></p><p class="text-neutral"><span class="link link-primary">9:31</span> <span class="">We could use some
+of the techniques that we've</span></p><p class="text-neutral"><span class="link link-primary">9:34</span> <span class="">discussed before. So we could, to
+improve the prompt, we</span></p><p class="text-neutral"><span class="link link-primary">9:38</span> <span class="">could say proofread and
+correct the following text.</span></p><p class="text-neutral"><span class="link link-primary">9:44</span> <span class="">And rewrite.</span></p><p class="text-neutral"><span class="link link-primary">9:55</span> <span class="">And rewrite the whole.</span></p><p class="text-neutral"><span class="link link-primary">10:01</span> <span class="">And rewrite it.</span></p><p class="text-neutral"><span class="link link-primary">10:03</span> <span class="">Corrected version. If you don't
+find any errors, just</span></p><p class="text-neutral"><span class="link link-primary">10:13</span> <span class="">say no errors found.</span></p><p class="text-neutral"><span class="link link-primary">10:19</span> <span class="">Let's try this.</span></p><p class="text-neutral"><span class="link link-primary">10:25</span> <span class="">So this way we were able to, oh,
+they're still using quotes here. But</span></p><p class="text-neutral"><span class="link link-primary">10:29</span> <span class="">you can imagine you'd be
+able to find a way</span></p><p class="text-neutral"><span class="link link-primary">10:32</span> <span class="">with a little bit of
+iterative prompt development. To kind</span></p><p class="text-neutral"><span class="link link-primary">10:35</span> <span class="">of find a prompt that works more reliably
+every single time.</span></p><p class="text-neutral"><span class="link link-primary">10:40</span> <span class="">And so now we'll do another example. It's
+always useful to check your text</span></p><p class="text-neutral"><span class="link link-primary">10:44</span> <span class="">before you post it in
+a public forum. And so we'll go through</span></p><p class="text-neutral"><span class="link link-primary">10:48</span> <span class="">an example of checking
+a review. And so here</span></p><p class="text-neutral"><span class="link link-primary">10:51</span> <span class="">is a review about a
+stuffed panda. And so we're</span></p><p class="text-neutral"><span class="link link-primary">10:53</span> <span class="">going to ask the model to proofread
+and correct the review.</span></p><p class="text-neutral"><span class="link link-primary">10:57</span> <span class=""></span></p><p class="text-neutral"><span class="link link-primary">10:59</span> <span class="">Great.
+So we have this corrected version.</span></p><p class="text-neutral"><span class="link link-primary">11:02</span> <span class="">And one cool thing we can do is
+find the kind of</span></p><p class="text-neutral"><span class="link link-primary">11:07</span> <span class="">differences between our original
+review and the model's output. So</span></p><p class="text-neutral"><span class="link link-primary">11:11</span> <span class="">we're going to use this redlines Python
+package to do this. And we're</span></p><p class="text-neutral"><span class="link link-primary">11:16</span> <span class="">going to get the diff between
+the original text of</span></p><p class="text-neutral"><span class="link link-primary">11:20</span> <span class="">our review and the
+model output and then</span></p><p class="text-neutral"><span class="link link-primary">11:23</span> <span class="">display this.</span></p><p class="text-neutral"><span class="link link-primary">11:25</span> <span class="">And so here you can see the diff
+between the original review</span></p><p class="text-neutral"><span class="link link-primary">11:29</span> <span class="">and the model output
+and the kind of</span></p><p class="text-neutral"><span class="link link-primary">11:32</span> <span class="">things that have been corrected. So,
+the prompt that we used was,</span></p><p class="text-neutral"><span class="link link-primary">11:37</span> <span class="">"proofread and correct this review".
+But you can also make</span></p><p class="text-neutral"><span class="link link-primary">11:40</span> <span class="">kind of more dramatic changes,
+changes to tone,</span></p><p class="text-neutral"><span class="link link-primary">11:43</span> <span class="">and that kind of thing. So, let's
+try one more thing. So, in</span></p><p class="text-neutral"><span class="link link-primary">11:47</span> <span class="">this prompt, we're going to ask the model
+to proofread and correct</span></p><p class="text-neutral"><span class="link link-primary">11:52</span> <span class="">this same review, but also
+make it more compelling and ensure</span></p><p class="text-neutral"><span class="link link-primary">11:55</span> <span class="">that it follows APA style and
+targets an advanced</span></p><p class="text-neutral"><span class="link link-primary">11:59</span> <span class="">reader. And we're also going
+to ask for the output</span></p><p class="text-neutral"><span class="link link-primary">12:02</span> <span class="">in markdown format. And so we're
+using the same text from the original review</span></p><p class="text-neutral"><span class="link link-primary">12:07</span> <span class="">up here. So, let's execute this.</span></p><p class="text-neutral"><span class="link link-primary">12:12</span> <span class="">And here we have
+an expanded APA style</span></p><p class="text-neutral"><span class="link link-primary">12:15</span> <span class="">review of the softpanda. So,
+this is it for the transforming video.</span></p><p class="text-neutral"><span class="link link-primary">12:20</span> <span class="">Next up, we have "Expanding",
+where we'll take a shorter prompt and</span></p><p class="text-neutral"><span class="link link-primary">12:25</span> <span class="">kind of generate a longer, more
+freeform response from</span></p><p class="text-neutral"><span class="link link-primary">12:28</span> <span class="">a language model.</span></p></div>
+</body>
+</html>
