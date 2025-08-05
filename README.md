@@ -18,6 +18,13 @@ Course - ChatGPT Prompt Engineering for Developers by DeepLearning.ai
 
 🎯 **Exemplos e Aplicações Práticas** -  Durante a aula, são mostrados exemplos práticos que ilustram como pequenas mudanças no prompt podem melhorar significativamente os resultados. Por exemplo, ao pedir uma resposta em formato de tabela ou ao incluir exemplos de entrada e saída, o modelo tende a seguir o padrão com mais precisão. A ideia central é que bons prompts não são apenas sobre o que se pergunta, mas como se pergunta.
 
+## Interative
+
+A abordagem iterativa no uso de modelos de linguagem generativa é essencial para obter resultados mais precisos e úteis. Em vez de depender de um único prompt, o processo envolve testar, ajustar e refinar instruções com base nas respostas obtidas. Essa prática permite entender como o modelo interpreta comandos e como pequenas mudanças podem impactar significativamente a saída.
+
+Técnicas como delimitação de conteúdo, uso de formatos estruturados (JSON, Markdown) e instruções explícitas sobre tom, estilo e formato são fundamentais para orientar o modelo com mais controle. Ao aplicar essas estratégias, o desenvolvedor consegue transformar tarefas complexas — como tradução, correção gramatical e conversão de formatos — em fluxos mais previsíveis e eficientes.
+
+A experimentação contínua é parte central do processo. Iterar sobre prompts não apenas melhora a qualidade das respostas, mas também revela padrões de comportamento do modelo. Essa abordagem torna o uso da IA mais confiável e adaptável a diferentes contextos, permitindo que desenvolvedores criem soluções mais robustas e alinhadas aos seus objetivos.
 
 ### Fonte
 
